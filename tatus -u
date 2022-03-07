@@ -1,0 +1,170 @@
+warning: LF will be replaced by CRLF in app.json.
+The file will have its original line endings in your working directory
+warning: LF will be replaced by CRLF in package-lock.json.
+The file will have its original line endings in your working directory
+warning: LF will be replaced by CRLF in package.json.
+The file will have its original line endings in your working directory
+[1mdiff --git a/app.json b/app.json[m
+[1mindex f1a11d5..e269db8 100644[m
+[1m--- a/app.json[m
+[1m+++ b/app.json[m
+[36m@@ -3,6 +3,7 @@[m
+     "name": "MemoApp",[m
+     "slug": "MemoApp",[m
+     "version": "1.0.0",[m
+[32m+[m[32m    "privacy":"unlisted",[m
+     "orientation": "portrait",[m
+     "icon": "./assets/icon.png",[m
+     "splash": {[m
+[1mdiff --git a/package-lock.json b/package-lock.json[m
+[1mindex 0bceebd..5aec6db 100644[m
+[1m--- a/package-lock.json[m
+[1m+++ b/package-lock.json[m
+[36m@@ -10,6 +10,7 @@[m
+       "dependencies": {[m
+         "expo": "~44.0.0",[m
+         "expo-status-bar": "~1.2.0",[m
+[32m+[m[32m        "expo-updates": "~0.11.6",[m
+         "react": "17.0.1",[m
+         "react-dom": "17.0.1",[m
+         "react-native": "0.64.3",[m
+[36m@@ -4414,6 +4415,11 @@[m
+         "expo": "*"[m
+       }[m
+     },[m
+[32m+[m[32m    "node_modules/expo-json-utils": {[m
+[32m+[m[32m      "version": "0.2.1",[m
+[32m+[m[32m      "resolved": "https://registry.npmjs.org/expo-json-utils/-/expo-json-utils-0.2.1.tgz",[m
+[32m+[m[32m      "integrity": "sha512-wU7gXGtaUlyxFLTp5e3PbnJB90/92r6gEc2BuMHdqE0OxhTQKyKzRszk2szCsdkeI7L4XntvZhCs1Px+gL1gvA=="[m
+[32m+[m[32m    },[m
+     "node_modules/expo-keep-awake": {[m
+       "version": "10.0.2",[m
+       "resolved": "https://registry.npmjs.org/expo-keep-awake/-/expo-keep-awake-10.0.2.tgz",[m
+[36m@@ -4422,6 +4428,14 @@[m
+         "expo": "*"[m
+       }[m
+     },[m
+[32m+[m[32m    "node_modules/expo-manifests": {[m
+[32m+[m[32m      "version": "0.2.4",[m
+[32m+[m[32m      "resolved": "https://registry.npmjs.org/expo-manifests/-/expo-manifests-0.2.4.tgz",[m
+[32m+[m[32m      "integrity": "sha512-8PrMPyvElKXflYd1ApDHJR9JF0SR996iVEVQgHAMLzVP7OqEAM6dQaFeqrRqVn/DSsxEWkJTpxv8WJ5NWrT4Lg==",[m
+[32m+[m[32m      "dependencies": {[m
+[32m+[m[32m        "expo-json-utils": "~0.2.0"[m
+[32m+[m[32m      }[m
+[32m+[m[32m    },[m
+     "node_modules/expo-modules-autolinking": {[m
+       "version": "0.5.5",[m
+       "resolved": "https://registry.npmjs.org/expo-modules-autolinking/-/expo-modules-autolinking-0.5.5.tgz",[m
+[36m@@ -4537,6 +4551,38 @@[m
+       "resolved": "https://registry.npmjs.org/expo-status-bar/-/expo-status-bar-1.2.0.tgz",[m
+       "integrity": "sha512-pVZZ/kDCXFK79E4dCtRecs3XLC8aiwlciutSd/fFmUPJSQZ1Txia6hlKajPt0GAYft8/YnT0V3URXzWZOBniYQ=="[m
+     },[m
+[32m+[m[32m    "node_modules/expo-structured-headers": {[m
+[32m+[m[32m      "version": "2.1.1",[m
+[32m+[m[32m      "resolved": "https://registry.npmjs.org/expo-structured-headers/-/expo-structured-headers-2.1.1.tgz",[m
+[32m+[m[32m      "integrity": "sha512-0up4sfHHsiK2YLpTwD/ssUD2oeSGzVUeARnu/itKAJO4zHqjpc+m8N1s7HPSJcdC7fdDpMjzcdrDasT0o+cOAw=="[m
+[32m+[m[32m    },[m
+[32m+[m[32m    "node_modules/expo-updates": {[m
+[32m+[m[32m      "version": "0.11.6",[m
+[32m+[m[32m      "resolved": "https://registry.npmjs.org/expo-updates/-/expo-updates-0.11.6.tgz",[m
+[32m+[m[32m      "integrity": "sha512-nTzEc/z0/QHwu6gJhYSh5TWDSzNLO9bmtP4aQzStfqT8RRoh1bYRomszxjc7e3CsZT8xrG88XKlZ4iKL6zHLoQ==",[m
+[32m+[m[32m      "dependencies": {[m
+[32m+[m[32m        "@expo/config": "^6.0.6",[m
+[32m+[m[32m        "@expo/config-plugins": "^4.0.2",[m
+[32m+[m[32m        "@expo/metro-config": "~0.2.6",[m
+[32m+[m[32m        "expo-manifests": "~0.2.2",[m
+[32m+[m[32m        "expo-structured-headers": "~2.1.0",[m
+[32m+[m[32m        "expo-updates-interface": "~0.5.0",[m
+[32m+[m[32m        "fbemitter": "^2.1.1",[m
+[32m+[m[32m        "resolve-from": "^5.0.0",[m
+[32m+[m[32m        "uuid": "^3.4.0"[m
+[32m+[m[32m      },[m
+[32m+[m[32m      "peerDependencies": {[m
+[32m+[m[32m        "expo": "*"[m
+[32m+[m[32m      }[m
+[32m+[m[32m    },[m
+[32m+[m[32m    "node_modules/expo-updates-interface": {[m
+[32m+[m[32m      "version": "0.5.1",[m
+[32m+[m[32m      "resolved": "https://registry.npmjs.org/expo-updates-interface/-/expo-updates-interface-0.5.1.tgz",[m
+[32m+[m[32m      "integrity": "sha512-RLvC69o1BkhHP6hNaWiIvSiTgXABB9v4HnoietoXKFHlAyxlQCupy6ki164KpZNrOS/PFJ2WWqZOvKfiyDVO+w==",[m
+[32m+[m[32m      "peerDependencies": {[m
+[32m+[m[32m        "expo": "*"[m
+[32m+[m[32m      }[m
+[32m+[m[32m    },[m
+     "node_modules/extend-shallow": {[m
+       "version": "3.0.2",[m
+       "resolved": "https://registry.npmjs.org/extend-shallow/-/extend-shallow-3.0.2.tgz",[m
+[36m@@ -12695,12 +12741,25 @@[m
+         "fontfaceobserver": "^2.1.0"[m
+       }[m
+     },[m
+[32m+[m[32m    "expo-json-utils": {[m
+[32m+[m[32m      "version": "0.2.1",[m
+[32m+[m[32m      "resolved": "https://registry.npmjs.org/expo-json-utils/-/expo-json-utils-0.2.1.tgz",[m
+[32m+[m[32m      "integrity": "sha512-wU7gXGtaUlyxFLTp5e3PbnJB90/92r6gEc2BuMHdqE0OxhTQKyKzRszk2szCsdkeI7L4XntvZhCs1Px+gL1gvA=="[m
+[32m+[m[32m    },[m
+     "expo-keep-awake": {[m
+       "version": "10.0.2",[m
+       "resolved": "https://registry.npmjs.org/expo-keep-awake/-/expo-keep-awake-10.0.2.tgz",[m
+       "integrity": "sha512-Ro1lgyKldbFs4mxhWM+goX9sg0S2SRR8FiJJeOvaRzf8xNhrZfWA00Zpr+/3ocCoWQ3eEL+X9UF4PXXHf0KoOg==",[m
+       "requires": {}[m
+     },[m
+[32m+[m[32m    "expo-manifests": {[m
+[32m+[m[32m      "version": "0.2.4",[m
+[32m+[m[32m      "resolved": "https://registry.npmjs.org/expo-manifests/-/expo-manifests-0.2.4.tgz",[m
+[32m+[m[32m      "integrity": "sha512-8PrMPyvElKXflYd1ApDHJR9JF0SR996iVEVQgHAMLzVP7OqEAM6dQaFeqrRqVn/DSsxEWkJTpxv8WJ5NWrT4Lg==",[m
+[32m+[m[32m      "requires": {[m
+[32m+[m[32m        "expo-json-utils": "~0.2.0"[m
+[32m+[m[32m      }[m
+[32m+[m[32m    },[m
+     "expo-modules-autolinking": {[m
+       "version": "0.5.5",[m
+       "resolved": "https://registry.npmjs.org/expo-modules-autolinking/-/expo-modules-autolinking-0.5.5.tgz",[m
+[36m@@ -12788,6 +12847,33 @@[m
+       "resolved": "https://registry.npmjs.org/expo-status-bar/-/expo-status-bar-1.2.0.tgz",[m
+       "integrity": "sha512-pVZZ/kDCXFK79E4dCtRecs3XLC8aiwlciutSd/fFmUPJSQZ1Txia6hlKajPt0GAYft8/YnT0V3URXzWZOBniYQ=="[m
+     },[m
+[32m+[m[32m    "expo-structured-headers": {[m
+[32m+[m[32m      "version": "2.1.1",[m
+[32m+[m[32m      "resolved": "https://registry.npmjs.org/expo-structured-headers/-/expo-structured-headers-2.1.1.tgz",[m
+[32m+[m[32m      "integrity": "sha512-0up4sfHHsiK2YLpTwD/ssUD2oeSGzVUeARnu/itKAJO4zHqjpc+m8N1s7HPSJcdC7fdDpMjzcdrDasT0o+cOAw=="[m
+[32m+[m[32m    },[m
+[32m+[m[32m    "expo-updates": {[m
+[32m+[m[32m      "version": "0.11.6",[m
+[32m+[m[32m      "resolved": "https://registry.npmjs.org/expo-updates/-/expo-updates-0.11.6.tgz",[m
+[32m+[m[32m      "integrity": "sha512-nTzEc/z0/QHwu6gJhYSh5TWDSzNLO9bmtP4aQzStfqT8RRoh1bYRomszxjc7e3CsZT8xrG88XKlZ4iKL6zHLoQ==",[m
+[32m+[m[32m      "requires": {[m
+[32m+[m[32m        "@expo/config": "^6.0.6",[m
+[32m+[m[32m        "@expo/config-plugins": "^4.0.2",[m
+[32m+[m[32m        "@expo/metro-config": "~0.2.6",[m
+[32m+[m[32m        "expo-manifests": "~0.2.2",[m
+[32m+[m[32m        "expo-structured-headers": "~2.1.0",[m
+[32m+[m[32m        "expo-updates-interface": "~0.5.0",[m
+[32m+[m[32m        "fbemitter": "^2.1.1",[m
+[32m+[m[32m        "resolve-from": "^5.0.0",[m
+[32m+[m[32m        "uuid": "^3.4.0"[m
+[32m+[m[32m      }[m
+[32m+[m[32m    },[m
+[32m+[m[32m    "expo-updates-interface": {[m
+[32m+[m[32m      "version": "0.5.1",[m
+[32m+[m[32m      "resolved": "https://registry.npmjs.org/expo-updates-interface/-/expo-updates-interface-0.5.1.tgz",[m
+[32m+[m[32m      "integrity": "sha512-RLvC69o1BkhHP6hNaWiIvSiTgXABB9v4HnoietoXKFHlAyxlQCupy6ki164KpZNrOS/PFJ2WWqZOvKfiyDVO+w==",[m
+[32m+[m[32m      "requires": {}[m
+[32m+[m[32m    },[m
+     "extend-shallow": {[m
+       "version": "3.0.2",[m
+       "resolved": "https://registry.npmjs.org/extend-shallow/-/extend-shallow-3.0.2.tgz",[m
+[1mdiff --git a/package.json b/package.json[m
+[1mindex 71ebb82..1fcd8e5 100644[m
+[1m--- a/package.json[m
+[1m+++ b/package.json[m
+[36m@@ -15,7 +15,8 @@[m
+     "react": "17.0.1",[m
+     "react-dom": "17.0.1",[m
+     "react-native": "0.64.3",[m
+[31m-    "react-native-web": "0.17.1"[m
+[32m+[m[32m    "react-native-web": "0.17.1",[m
+[32m+[m[32m    "expo-updates": "~0.11.6"[m
+   },[m
+   "devDependencies": {[m
+     "@babel/core": "^7.12.9"[m
