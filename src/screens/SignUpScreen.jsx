@@ -3,18 +3,18 @@ import { StyleSheet, View, Text, TextInput } from "react-native";
 import AppBar from '../components/AppBar';
 import Button from '../components/Button';
 
-export default function LoginScreeen (){
+export default function SignUpScreeen (){
     return (
         <View style={styles.container}>
             <AppBar />
             <View style={styles.Inner}>
-                <Text style={styles.title}>Log In</Text>
+                <Text style={styles.title}>Sign Up</Text>
                 <TextInput style={styles.Input} value='Email Adress'/>
                 <TextInput style={styles.Input} value='Password'/>
                 <Button label='submit' />
                 <View style={styles.footer}>
-                    <Text style={styles.footerText}>Not registered? </Text>
-                    <Text style={styles.footerLink}>Click here!</Text>
+                    <Text style={styles.footerText}>Aready registered?  </Text>
+                    <Text style={styles.footerLink}>Log In.</Text>
                 </View>
             </View>
 
