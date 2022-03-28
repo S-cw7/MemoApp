@@ -4,10 +4,10 @@ import MemoListScreen from './src/screens/MemoListScreen';
 import MemoEditScreen from './src/screens/MemoEditScreen';
 import MemoCreateScreen from './src/screens/MemoCreateScreen';
 import LoginScreeen from './src/screens/LoginScreen';
-import SignUpScreeen from './src/screens/SignUpScreen';
+import SignUpScreen from './src/screens/SignUpScreen';
 
 export default function App() {
   return (
-    <SignUpScreeen />
+    <MemoListScreen />
   );
 }
