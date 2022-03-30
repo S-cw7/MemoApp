@@ -3,18 +3,33 @@ import { StyleSheet, View, Text, TextInput, TouchableOpacity } from "react-nativ
 import AppBar from '../components/AppBar';
 import Button from '../components/Button';
 
-export default function SignUpScreeen (){
+export default function SignUpScreeen (props){
+    const { navigation } = props;
     return (
         <View style={styles.container}>
-            <AppBar />
             <View style={styles.Inner}>
                 <Text style={styles.title}>Sign Up</Text>
                 <TextInput style={styles.Input} value='Email Adress'/>
                 <TextInput style={styles.Input} value='Password'/>
-                <Button label='submit' />
+                <Button 
+                    label='submit'
+                    onPress={ () => { 
+                        navigation.reset({
+                            index: 0,
+                            routes: [{ name: 'MemoList'}],
+                        });
+                    }} 
+                />
                 <View style={styles.footer}>
                     <Text style={styles.footerText}>Aready registered?  </Text>
-                    <TouchableOpacity>
+                    <TouchableOpacity 
+                        onPress={ () => {
+                            navigation.reset({
+                                index: 0,
+                                routes: [{ name: 'LogIn' }],
+                            }); 
+                        }}
+                    >
                         <Text style={styles.footerLink}>Log In.</Text>
                     </TouchableOpacity>
                 </View>

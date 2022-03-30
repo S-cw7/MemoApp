@@ -5,12 +5,15 @@ import AppBar from '../components/AppBar';
 import MemoList from '../components/MemoList';
 import CircleButtom from '../components/CircleButtom';
 
-export default function MemoListScreen() {
+export default function MemoListScreen(props){
+  const { navigation } = props;
   return (
     <View style={styles.container}>
-      <AppBar />
       <MemoList />
-      <CircleButtom name="plus" />
+      <CircleButtom 
+        name="plus" 
+        onPress={ () => { navigation.navigate('MemoCreate'); }}
+      />
     </View>
   );
 }
