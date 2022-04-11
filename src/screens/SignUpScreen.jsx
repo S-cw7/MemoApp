@@ -1,24 +1,55 @@
-import React from 'react';
-import { StyleSheet, View, Text, TextInput, TouchableOpacity } from "react-native";
-import AppBar from '../components/AppBar';
+import React, { useState } from 'react';
+import { StyleSheet, View, Text, TextInput, TouchableOpacity, Alert } from "react-native";
 import Button from '../components/Button';
+import firebase from 'firebase';
+
 
 export default function SignUpScreeen (props){
     const { navigation } = props;
+    const [email, setEmail] = useState(''); 
+    const [password, setPassword] = useState(''); 
+
+    function handlePress() {
+        firebase.auth().createUserWithEmailAndPassword(email, password)
+            .then((userCredential) => {
+                const {user} = userCredential;
+                console.log(user.uid);
+                navigation.reset({
+                    index: 0,
+                    routes: [{ name: 'MemoList'}],
+                });
+            })
+            .catch((error) => {
+                console.log(error.code, error.message);
+                Alert.alert(error.code);
+            });
+    }
+
     return (
         <View style={styles.container}>
             <View style={styles.Inner}>
                 <Text style={styles.title}>Sign Up</Text>
-                <TextInput style={styles.Input} value='Email Adress'/>
-                <TextInput style={styles.Input} value='Password'/>
+                <TextInput 
+                    style={styles.Input} 
+                    value={email}
+                    onChangeText={(text) => { setEmail(text); }}
+                    autoCapitalize="none"
+                    keyboardType="email-address"
+                    placeholder="Email Adress"
+                    textContentType="emailAddress"
+                />
+                <TextInput 
+                    style={styles.Input} 
+                    value={password}
+                    onChangeText={(text) => { setPassword(text); }}
+                    autoCapitalize="none"
+                    placeholder="Password"
+                    textContentType="password"
+                    secureTextEntry
+                />
                 <Button 
                     label='submit'
-                    onPress={ () => { 
-                        navigation.reset({
-                            index: 0,
-                            routes: [{ name: 'MemoList'}],
-                        });
-                    }} 
+                    onPress={handlePress} 
                 />
                 <View style={styles.footer}>
                     <Text style={styles.footerText}>Aready registered?  </Text>

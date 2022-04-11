@@ -1,7 +1,7 @@
 {
   "expo": {
     "name": "MemoApp",
-    "slug": "MemoApp",
+    "slug": "memoapp_demo",
     "version": "1.0.0",
     "privacy": "unlisted",
     "orientation": "portrait",
