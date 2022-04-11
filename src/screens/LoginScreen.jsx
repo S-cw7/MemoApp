@@ -1,5 +1,5 @@
 import firebase from 'firebase';
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { StyleSheet, View, Text, TextInput } from "react-native";
 import { TouchableOpacity } from 'react-native-gesture-handler';
 import Button from '../components/Button';
@@ -8,6 +8,25 @@ export default function LoginScreen (props){
     const { navigation } = props;
     const [email, setEmail] = useState(''); 
     const [password, setPassword] = useState('');
+
+    useEffect(() => {
+        console.log('useEffect!');
+        return () => {
+            console.log('Unmount!');
+        };
+    }, []);
+
+    useEffect (() => {
+        const unsubscribe = firebase.auth().onAuthStateChanged((user) => {
+            if(user) => {
+                navigation.reset({
+                    index: 0,
+                    routes: [{ name: 'MemoList'}],
+                }); 
+            }
+        });
+        return unsubscribe;
+    }, []);
 
     function handlePress() {
         firebase.auth() .signInWithEmailAndPassword(email.password)
